@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.animation-container {
+    
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background-size: 0px 240px; */
+    animation: background 20s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #2eb995, #469b2a, rgb(241, 199, 199),#a279a8, #75142b, #396cda, rgb(31, 23, 23),#778203);
+    background-size: 1200% 1200%;
+-webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+.btn-container{
+    background: whitesmoke;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    opacity: 0.4;
+    z-index: 999;
+}
+.btn{
+    opacity: 1;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 10px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-family: monospace;
+}
+.btn:hover{
+    background:gray;
+    color: white;
+}
+.facebook{
+    background: #5A20CB;
+    color: white;
+}
+.google{
+    background: #6A1B4D;
+    color: white;
+}
+.btn:not(last-child){
+    margin-bottom: 30px;
+}
+.btn:not(first-child){
+    margin-top: 20px;
+}
+.icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.icon-wrapper .icon {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: icons 20s linear infinite;
+    bottom: -300px;
+    z-index: 99;
+}
+.icon-wrapper .icon:nth-child(1) {
+     font-size: 40px;
+    left: 86%;
+    
+    animation-delay: 0s;
+}
+
+.icon-wrapper .icon:nth-child(2) {
+    left: 12%;
+   
+     font-size: 60px;
+     animation-delay: 1.5s;
+    animation-duration: 15s;
+}
+
+.icon-wrapper .icon:nth-child(3) {
+    left: 70%;
+  
+     font-size: 70px;
+    
+   animation-delay: 5.5s;
+
+}
+
+.icon-wrapper .icon:nth-child(4) {
+    left: 70%;
+   animation-delay: 0s;
+    animation-duration: 15s;
+     font-size: 90px;
+}
+
+.icon-wrapper .icon:nth-child(5) {
+    left: 65%;
+     font-size: 95px;
+    animation-delay: 0s;
+}
+
+.icon-wrapper .icon:nth-child(6) {
+    left: 15%;
+    animation-delay: 3.5s;
+     font-size: 65px;
+}
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+@keyframes icons {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50%{
+         transform: translateY(-400px) rotate(180deg);
+         opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
